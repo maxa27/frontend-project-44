@@ -25,7 +25,8 @@ export default function isPrimeNum() {
       console.log('Correct!');
       countSuccess += 1;
     } else {
-      return;
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'\n.Let's try again, ${name}!`);
+      break;
     }
     if (countSuccess === 3) {
       congratulations();
