@@ -7,5 +7,5 @@ export function welcome() {
 }
 
 export function congratulations() {
-  console.log(`Congratulations, ${name}`);
+  console.log(`Congratulations, ${name}!`);
 }
