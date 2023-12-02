@@ -1,14 +1,12 @@
 #!/usr/bin/env node
 /* eslint-disable no-unused-vars */
 import readlineSync from 'readline-sync';
+import { welcome, congratulations } from '../src/callback.js';
 import { name, getName } from '../src/cli.js';
-
-console.log('Welcome to the Brain Games!');
-// eslint-disable-next-line no-undef
-getName();
 
 // eslint-disable-next-line consistent-return
 export default function calculator() {
+  welcome();
   console.log('What is the result of the expression?');
   let count = 0;
   for (let i = 0; i < 3; i += 1) {
@@ -49,7 +47,7 @@ export default function calculator() {
     }
   }
   if (count === 3) {
-    console.log(`Congratulations, ${name}`);
+    congratulations();
   } else {
     return calculator();
   }

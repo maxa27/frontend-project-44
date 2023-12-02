@@ -1,8 +1,10 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
+import { welcome, congratulations } from '../src/callback.js';
 import { name, getName } from '../src/cli.js';
 
 export default function isEven() {
+  welcome(getName);
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   for (let i = 0; i <= 3; i += 1) {
     const number = Math.round(Math.random() * 100);
@@ -16,7 +18,6 @@ export default function isEven() {
       console.log(`${'\'yes\' is wrong answer ;(. Correct answer was \'no\'. \nLet\'s try again,'} ${name}`);
     }
   }
-  console.log(`${'Congratulations,'} ${name}`);
+  congratulations();
 }
-getName();
 isEven();

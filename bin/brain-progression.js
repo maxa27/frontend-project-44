@@ -1,13 +1,11 @@
 #!/usr/bin/env node
 /* eslint-disable no-unused-vars */
 import readlineSync from 'readline-sync';
+import { welcome, congratulations } from '../src/callback.js';
 import { name, getName } from '../src/cli.js';
 
-console.log('Welcome to the Brain Games!');
-// eslint-disable-next-line no-undef
-getName();
-
 export default function progressionArithmetic() {
+  welcome();
   let count = 0;
   // const randomProgression = Math.floor(Math.random() * 30); // рандомные числа в прогрессии.
   console.log('What number is missing in the progression?');
@@ -25,7 +23,6 @@ export default function progressionArithmetic() {
     const correctAnswer = progressionArray.splice(secretNumber, 1, '..');
     console.log(`Question: ${progressionArray.join(' ')}`);
     const answer = readlineSync.question('Your answer: ');
-    console.log(correctAnswer.join(''));
 
     if (Number(answer) === Number(correctAnswer)) {
       console.log('Correct!');
@@ -36,7 +33,7 @@ export default function progressionArithmetic() {
     }
   }
   if (count === 3) {
-    console.log(`Congratulations, ${name}`);
+    congratulations();
   }
 }
 progressionArithmetic();
