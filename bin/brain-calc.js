@@ -37,13 +37,13 @@ export default function calculator() {
       count += 1;
     } else if (Array[index] === '+' && Number(answer) !== plus) {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${Number(plus)}'.
-      Let's try again, ${name}`);
+      Let's try again, ${name}!`);
     } else if (Array[index] === '-' && Number(answer) !== minus) {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${Number(minus)}'.
-        Let's try again, ${name}`);
+        Let's try again, ${name}!`);
     } else if (Array[index] === '*' && Number(answer) !== mupltiply) {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${Number(mupltiply)}'.
-          Let's try again, ${name}`);
+          Let's try again, ${name}!`);
     }
   }
   if (count === 3) {

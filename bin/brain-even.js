@@ -18,7 +18,7 @@ export default function isEven() {
       console.log('Correct');
       count += 1;
     } else {
-      console.log(`${'\'yes\' is wrong answer ;(. Correct answer was \'no\'. \nLet\'s try again,'} ${name}`);
+      console.log(`${'\'yes\' is wrong answer ;(. Correct answer was \'no\'. \nLet\'s try again,'} ${name}!`);
       break;
     }
   }
