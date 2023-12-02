@@ -48,8 +48,6 @@ export default function calculator() {
   }
   if (count === 3) {
     congratulations();
-  } else {
-    return calculator();
   }
 }
 calculator();
