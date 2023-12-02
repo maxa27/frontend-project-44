@@ -7,7 +7,6 @@ import { name, getName } from '../src/cli.js';
 export default function progressionArithmetic() {
   welcome();
   let count = 0;
-  // const randomProgression = Math.floor(Math.random() * 30); // рандомные числа в прогрессии.
   console.log('What number is missing in the progression?');
   for (let i = 0; i < 3; i += 1) {
     const progressionIndex = Math.floor(Math.random() * 5 + 3); // рандомная индекс прогрессии.
@@ -15,10 +14,9 @@ export default function progressionArithmetic() {
     const progressionLength = Math.floor(Math.random() * 5 + 5);
     const secretNumber = Math.floor(Math.random() * progressionLength); //
 
-    const progressionArray = [start]; // пустой массив
+    const progressionArray = [start];
     for (let j = 0; j < progressionLength; j += 1) {
       progressionArray.push(progressionArray[progressionArray.length - 1] + progressionIndex);
-      // console.log(progressionArray);
     }
     const correctAnswer = progressionArray.splice(secretNumber, 1, '..');
     console.log(`Question: ${progressionArray.join(' ')}`);
